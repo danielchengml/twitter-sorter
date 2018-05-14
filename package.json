@@ -1,0 +1,25 @@
+{
+  "name": "twitter-sorter",
+  "version": "1.0.0",
+  "description": "A program to obtain, sort and store twitter posts from the client's REST API and serve the sorted data via API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "Daniel C Lean",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "moment": "^2.22.1",
+    "mongoose": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}
