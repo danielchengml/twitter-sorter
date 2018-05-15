@@ -5,10 +5,6 @@ This application will perform 2 main functions:
 1.  Utilize the client's REST API endpoint to collect, sort and store all the tweets from 2016 and 2017 into a Database.
 1.  Build a rest API that will provide sorted feed data to the front end.
 
-## Technical approach for building the Application:
-
-This app will be built using the Node and ReactJS. Data will be collected from the API Endpoint systematically using a Node.js Server and stored in memory. The Node/ Express server will also function to serve the the desired data (tweets) to the front end via API calls. The front end will be built in ReactJS and will render the data to the users in an interactive format.
-
 ## Installation:
 
 In order to run the application, your machine must have node.js installed.
@@ -20,6 +16,10 @@ $ cd twitter-sorter
 $ npm i
 $ npm run server
 ```
+
+## Technical approach for building the Application:
+
+This app will be built using the Node and ReactJS. Data will be collected from the API Endpoint systematically using a Node.js Server and stored in memory. The Node/ Express server will also function to serve the the desired data (tweets) to the front end via API calls. The front end will be built in ReactJS and will render the data to the users in an interactive format.
 
 ### Client's REST API Setup
 
