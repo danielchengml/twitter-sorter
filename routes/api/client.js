@@ -80,7 +80,7 @@ const getClientTweets = async (req, res) => {
     return tweets.data;
   };
 
-  // Get all client's tweets from 2016 & 2017
+  // ----------- Get all client's tweets from 2016 & 2017 --------------
   // Set initial start date as 1.1.2017 00:00:00
   tempDate.start = main.startDate;
 
@@ -118,6 +118,17 @@ const getClientTweets = async (req, res) => {
   );
 
   // Remove duplicates from client Tweet Array
+  main.allTweets.forEach((tweetObj, index) => {
+    if (
+      main.uniqueTweets.filter(
+        tweet => (tweet = tweet.text.toString() === tweetObj.text)
+      ).length === 0
+    ) {
+      main.uniqueTweets.push(tweetObj);
+      console.log("checking index:", index);
+      main.uniqueTweetCount = main.uniqueTweets.length;
+    }
+  });
 
   // Save final Tweet Array to database
   res.json(main);
