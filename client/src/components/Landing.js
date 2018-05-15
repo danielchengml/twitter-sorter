@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Moment from "react-moment";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -45,13 +46,29 @@ class Landing extends Component {
             Get Client's Tweets
           </Button>
         )}
-        <div style={{ margin: 30, minHeight: 100 }}>
+        <Paper style={{ margin: 30, padding: 20, minHeight: 100 }}>
+          <Typography variant="title">
+            Number of unique tweets between 2016 & 2017 is: {tweets.length}
+          </Typography>
           {tweets.map((tweet, i) => (
-            <Card>
-              <CardContent>{tweet.text}</CardContent>
+            <Card
+              style={{ backgroundColor: "#00aced", color: "white", margin: 10 }}
+              key={`tweet_${i}`}
+            >
+              <CardContent>
+                <Typography
+                  style={{ margin: 10, color: "white" }}
+                  variant="title"
+                >
+                  {tweet.text}
+                </Typography>
+                <Moment style={{ margin: 10, color: "grey" }}>
+                  {tweet.date}
+                </Moment>
+              </CardContent>
             </Card>
           ))}
-        </div>
+        </Paper>
       </Fragment>
     );
   }
