@@ -79,10 +79,30 @@ This will be a process to obtain all the tweets between 2016 and 2017 from the c
 #### Instructions:
 
 It is possible to obtain the data above in json directly via a http request. After the server is running, you can simply use the following url:
-`http://localhost:5000/client/get-client-tweets`
+`http://localhost:5000/api/client/get-client-tweets`
 
 ### Accessing sorted tweets and serving info as an API
 
-Tweets can be accessed and displayed in the following formats using the following routes:
+Tweets can be accessed and displayed in the following formats using the following route:
 
-1.  Route: /api/tweets/all
+`http://localhost:5000/api/tweets/get-unique-tweets`
+
+The response should look like this:
+
+```
+{
+   "created": {},
+   "tweetCount": 3516,
+   "tweets": [
+       {
+           "text": "RT @offclbrian: Marvel: \"Infinity War is the most ambitious crossover event in history.\" \n\nMe: https://t.co/CbFd97Movj",
+           "hashtags": [
+               {}
+           ],
+           "retweet": true,
+           "handle": {},
+           "date": "2016-01-01T00:35:43.9997208+00:00",
+           "url": {}
+       },
+       ...
+```

@@ -16,8 +16,8 @@ mongoose
 app.get("/", (req, res) =>
   res.json({ message: "Server Connection Successful" })
 );
-app.use("/client", client);
-app.use("/tweets", tweets);
+app.use("/api/client", client);
+app.use("/api/tweets", tweets);
 
 const port = process.env.PORT || 5000;
 
