@@ -33,7 +33,7 @@ const getUniqueTweets = async (req, res) => {
   };
   // Get the main client tweet object from client.js route
   const client = await axios.get(
-    "http://localhost:5000/client/get-client-tweets"
+    "http://localhost:5000/api/client/get-client-tweets"
   );
 
   const tweets = await client.data.uniqueTweets;

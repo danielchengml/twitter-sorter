@@ -3,7 +3,7 @@ const axios = require("axios");
 const moment = require("moment");
 const router = express.Router();
 
-const Client = require("../../models/Client");
+// const Client = require("../../models/Client");
 
 // @route   GET api/client/test
 // @desc    Test Client Route
