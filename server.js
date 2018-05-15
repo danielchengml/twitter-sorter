@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const client = require("./routes/api/client");
+const tweets = require("./routes/api/tweets");
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) =>
   res.json({ message: "Server Connection Successful" })
 );
 app.use("/client", client);
+app.use("/tweets", tweets);
 
 const port = process.env.PORT || 5000;
 

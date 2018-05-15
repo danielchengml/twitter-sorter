@@ -6,10 +6,22 @@ const TweetSchema = new Schema({
     type: String,
     required: true
   },
-  tweetType: {
-    type: String
+  hashtags: [
+    {
+      type: String
+    }
+  ],
+  retweet: {
+    type: Boolean,
+    default: false
   },
   handle: {
+    type: String
+  },
+  date: {
+    type: Date
+  },
+  url: {
     type: String
   }
 });

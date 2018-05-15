@@ -3,7 +3,6 @@ const axios = require("axios");
 const moment = require("moment");
 const router = express.Router();
 
-const Tweet = require("../../models/Tweet");
 const Client = require("../../models/Client");
 
 // @route   GET api/client/test
