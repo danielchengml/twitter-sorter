@@ -48,7 +48,7 @@ class Landing extends Component {
         )}
         <Paper style={{ margin: 30, padding: 20, minHeight: 100 }}>
           <Typography variant="title">
-            Number of unique tweets between 2016 & 2017 is: {tweets.length}
+            Number of unique tweets from 2016 to 2017: {tweets.length}
           </Typography>
           {tweets.map((tweet, i) => (
             <Card

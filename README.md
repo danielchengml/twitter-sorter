@@ -9,17 +9,22 @@ This application will perform 2 main functions:
 
 In order to run the application, your machine must have node.js installed.
 
+The instructions are as below:
+
 ```
 $ mkdir twitter-sorter
 $ git clone https://github.com/danielchengml/twitter-sorter
 $ cd twitter-sorter
-$ npm i
-$ npm run server
+$ npm run client-install    //installs the front end packages
+$ npm i                     //installs server side packages
+$ npm run dev               //runs both front end and backend server
 ```
+
+A browser window should pop up and run on `localhost:3000`. To obtain tweets, simply click the "Get Client's Tweets" Button to get client's tweets
 
 ## Technical approach for building the Application:
 
-This app will be built using the Node and ReactJS. Data will be collected from the API Endpoint systematically using a Node.js Server and stored in memory. The Node/ Express server will also function to serve the the desired data (tweets) to the front end via API calls. The front end will be built in ReactJS and will render the data to the users in an interactive format.
+This app is built using the Node and ReactJS. Data will be collected from the API Endpoint systematically using a Node.js Server and stored in memory. The Node/ Express server will also function to serve the the desired data (tweets) to the front end via API calls. The front end will be built in ReactJS and will render the data to the users.
 
 ### Client's REST API Setup
 
@@ -106,3 +111,21 @@ The response should look like this:
        },
        ...
 ```
+
+## Built With
+
+* ReactJS - The Front End Framework Used
+* NPM - Dependency Management
+* Node.js - The Server Framework Used
+
+## Versioning
+
+1.0.0
+
+## Authors
+
+* Daniel C Lean - [github.com/danielchengml](github.com/danielchengml)
+
+## Licence
+
+This project is licensed under the MIT License
