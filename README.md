@@ -7,9 +7,11 @@ This application will perform 2 main functions:
 
 ## Installation:
 
-In order to run the application, your machine must have node.js installed.
+In order to run the application, your machine must have node.js (and docker) installed.
 
 The instructions are as below:
+
+### Running without docker:
 
 ```
 $ mkdir twitter-sorter
@@ -20,7 +22,19 @@ $ npm i                     //installs server side packages
 $ npm run dev               //runs both front end and backend server
 ```
 
-A browser window should pop up and run on `localhost:3000`. To obtain tweets, simply click the "Get Client's Tweets" Button to get client's tweets
+A browser window should pop up and run on `http://localhost:3000`. To obtain tweets, simply click the "Get Client's Tweets" Button to get client's tweets
+
+### Running with docker:
+
+```
+$ mkdir twitter-sorter
+$ git clone https://github.com/danielchengml/twitter-sorter
+$ cd twitter-sorter
+$ docker build -t twitter-sorter .       //builds the docker image
+$ docker run -p 5000:5000 -p 3000:3000 twitter-sorter      //runs the docker image
+```
+
+The instructions will run the front end and backend instance and expose the ports `5000` (for server) and `3000` (for front end). To access the user interface, simply use `http://localhost:3000`. To obtain tweets, simply click the "Get Client's Tweets" Button to get client's tweets
 
 ## Technical approach for building the Application:
 
